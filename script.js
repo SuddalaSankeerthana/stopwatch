@@ -37,7 +37,7 @@ function startTimer(){
   if(tens>9){
     Outputtens.innerHTML = tens;
   }
-  if(tens > 99){
+  if(tens >9){
     seconds++;
     Outputseconds.innerHTML="0"+seconds;
     tens=0;
@@ -53,16 +53,15 @@ function startTimer(){
     Outputminute.innerHTML="0"+minute;
     Outputsec.innerHTML="00";
     }
+    if(minute>9){
+      Outputminute.innerHTML=minute
+    }
     if(minute>59){
       seconds="00";
-      minute="00";
+      minute=0;
       hour++;
-      Outputminute.innerHTML=minute;
+      Outputminute.innerHTML="0"+minute;
       Outputhr.innerHTML="0"+hour;
-    if(minute>9)
-    {
-      Outputminute.innerHTML=minute;
-    }
     if(hour>9){
       Outputhr.innerHTML=hour;
     }
